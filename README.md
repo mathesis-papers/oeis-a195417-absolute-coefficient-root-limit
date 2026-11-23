@@ -5,13 +5,15 @@
 As an elementary consequence of Baishanski's coefficient-norm limit (1999, §28.1, p. 523) and Neuwirth's trinomial maximum (2007, Remark 6.4), we answer Paul D. Hanna's question in OEIS A195417, first comment (history revision 2, September 17, 2011), for the cubic polynomial 1+x-x^3. If a_n is the sum of the absolute values of the coefficients of (1+x-x^3)^n, then its nth-root limit is sqrt((97+26 sqrt(13))/27). A unit-circle coefficient estimate gives explicit two-sided bounds for every n, and a polynomial identity gives the maximum exactly. The same estimate gives a self-contained proof of the A084611 root limit sqrt(5), announced by Kotěšovec in 2013, and gives the unposed root limits 9/sqrt(8) and sqrt(52/3) for A084613 and A084615.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24411294](https://doi.org/10.5281/zenodo.24411294)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24411293](https://doi.org/10.5281/zenodo.24411293)
 - License: CC-BY-4.0
 - Version: 4
 - Mathesis record: [oeis-a195417-absolute-coefficient-root-limit](https://mathesis-omega-research.apps.chrono-ai.fun/papers/oeis-a195417-absolute-coefficient-root-limit?version=4)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). An elementary consequence of Baishanski and Neuwirth answering Hanna's coefficient root-limit question. Mathesis, version 4. https://mathesis-omega-research.apps.chrono-ai.fun/papers/oeis-a195417-absolute-coefficient-root-limit?version=4
+Haobo Ma, Wenlin Zhang (2026). An elementary consequence of Baishanski and Neuwirth answering Hanna's coefficient root-limit question. Mathesis, version 4. https://doi.org/10.5281/zenodo.24411294
 
 ## Statement progress
 

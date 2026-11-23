@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24411293",
     "current_version": 4,
-    "doi": null,
+    "doi": "10.5281/zenodo.24411294",
     "lean_source": {
       "revision": "6bdbb68454659fcccffc7607b5fc292b2ff2fcdf",
       "url": "https://github.com/the-omega-institute/trureturing/blob/6bdbb68454659fcccffc7607b5fc292b2ff2fcdf/D5/S3/Analytic/Polynomial/A195417RootLimit.lean"
