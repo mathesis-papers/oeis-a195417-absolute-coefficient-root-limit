@@ -1,0 +1,226 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:oeis-a195417-absolute-coefficient-root-limit:4:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "6bdbb68454659fcccffc7607b5fc292b2ff2fcdf",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/6bdbb68454659fcccffc7607b5fc292b2ff2fcdf/D5/S3/Analytic/Polynomial/A195417RootLimit.lean"
+      },
+      "lineage": "collected:oeis-a195417-absolute-coefficient-root-limit:s1",
+      "macros": {},
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a195417-absolute-coefficient-root-limit",
+      "scope": "in_scope",
+      "statement": "Put $R=\\sqrt{(97+26\\sqrt{13})/27}$. For every integer $n\\geq0$,\n\\begin{equation}\n R^n\\leq a_n\\leq\\sqrt{3n+1}\\,R^n.\n\\end{equation}\nConsequently, $\\lim_{n\\to\\infty}a_n^{1/n}=R$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "An elementary consequence of Baishanski and Neuwirth answering Hanna's coefficient root-limit question",
+      "toolchain": null,
+      "version": 4,
+      "work": "oeis-a195417-absolute-coefficient-root-limit"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:oeis-a195417-absolute-coefficient-root-limit:4:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "6bdbb68454659fcccffc7607b5fc292b2ff2fcdf",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/6bdbb68454659fcccffc7607b5fc292b2ff2fcdf/D5/S3/Analytic/Polynomial/A195417RootLimit.lean"
+      },
+      "lineage": "collected:oeis-a195417-absolute-coefficient-root-limit:s2",
+      "macros": {},
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a195417-absolute-coefficient-root-limit",
+      "scope": "in_scope",
+      "statement": "Let $Q\\in\\mathbb C[x]$ be nonzero of degree $d$, and define\n\\[\n M=\\max_{|z|=1}|Q(z)|,\\qquad\n L_n=\\sum_{k=0}^{dn}|[x^k]Q(x)^n|.\n\\]\nThen $M>0$, and for every integer $n\\geq0$,\n\\begin{equation}\n M^n\\leq L_n\\leq\\sqrt{dn+1}\\,M^n.\n\\end{equation}\nIn particular $\\lim_{n\\to\\infty}L_n^{1/n}=M$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "An elementary consequence of Baishanski and Neuwirth answering Hanna's coefficient root-limit question",
+      "toolchain": null,
+      "version": 4,
+      "work": "oeis-a195417-absolute-coefficient-root-limit"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:oeis-a195417-absolute-coefficient-root-limit:4:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "6bdbb68454659fcccffc7607b5fc292b2ff2fcdf",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/6bdbb68454659fcccffc7607b5fc292b2ff2fcdf/D5/S3/Analytic/Polynomial/A195417RootLimit.lean"
+      },
+      "lineage": "collected:oeis-a195417-absolute-coefficient-root-limit:s3",
+      "macros": {},
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a195417-absolute-coefficient-root-limit",
+      "scope": "in_scope",
+      "statement": "For a real $m\\geq1$, put\n\\[\n B_n(m)=\\sum_{k=0}^{2n}|[x^k](1+x-mx^2)^n|,\\qquad\n M_m=(m+1)\\sqrt{1+\\frac1{4m}}.\n\\]\nThen, for every integer $n\\geq0$,\n\\[\n M_m^n\\leq B_n(m)\\leq\\sqrt{2n+1}\\,M_m^n,\n \\qquad\\lim_{n\\to\\infty}B_n(m)^{1/n}=M_m.\n\\]\nIn particular the limits for A084611, A084613 and A084615 are, respectively,\n$\\sqrt5$, $9/\\sqrt8$ and $\\sqrt{52/3}$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "An elementary consequence of Baishanski and Neuwirth answering Hanna's coefficient root-limit question",
+      "toolchain": null,
+      "version": 4,
+      "work": "oeis-a195417-absolute-coefficient-root-limit"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:oeis-a195417-absolute-coefficient-root-limit:4:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "6bdbb68454659fcccffc7607b5fc292b2ff2fcdf",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/6bdbb68454659fcccffc7607b5fc292b2ff2fcdf/D5/S3/Analytic/Polynomial/A195417RootLimit.lean"
+      },
+      "lineage": "collected:oeis-a195417-absolute-coefficient-root-limit:s4",
+      "macros": {},
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a195417-absolute-coefficient-root-limit",
+      "scope": "in_scope",
+      "statement": "For $T_{b,c}(n,k)=[x^k](1+bx+cx^2)^n$,\n\\begin{align*}\n T_{b,c}(n,k)&=\\sum_{\\substack{j\\geq0\\\\0\\leq k-2j\\leq n-j}}\n   \\binom nj\\binom{n-j}{k-2j}b^{k-2j}c^j,\\\\\n \\sum_k T_{b,c}(n,k)&=(1+b+c)^n,\\qquad\n \\sum_k(-1)^k T_{b,c}(n,k)=(1-b+c)^n,\\\\\n T_{b,c}(n,2n)&=c^n,\\qquad\n T_{b,c}(n,2n-1)=nbc^{n-1}\\quad(n\\geq1).\n\\end{align*}\nFor $b=1$, $c=-m$, the ordinary and alternating row sums are\n$(2-m)^n$ and $(-m)^n$. For $b,c\\geq0$ the absolute row sum is exactly\n$(1+b+c)^n$. Powers with exponent zero have value one, including $0^0$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "An elementary consequence of Baishanski and Neuwirth answering Hanna's coefficient root-limit question",
+      "toolchain": null,
+      "version": 4,
+      "work": "oeis-a195417-absolute-coefficient-root-limit"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:oeis-a195417-absolute-coefficient-root-limit:4:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "6bdbb68454659fcccffc7607b5fc292b2ff2fcdf",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/6bdbb68454659fcccffc7607b5fc292b2ff2fcdf/D5/S3/Analytic/Polynomial/A195417RootLimit.lean"
+      },
+      "lineage": "collected:oeis-a195417-absolute-coefficient-root-limit:s5",
+      "macros": {},
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a195417-absolute-coefficient-root-limit",
+      "scope": "in_scope",
+      "statement": "For $T(n,k)=[x^k](1+x-x^2)^n$,\n\\[\n \\sum_{k=0}^nT(n-k,k)=\\left\\lfloor\\frac{n+2}{2}\\right\\rfloor.\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "An elementary consequence of Baishanski and Neuwirth answering Hanna's coefficient root-limit question",
+      "toolchain": null,
+      "version": 4,
+      "work": "oeis-a195417-absolute-coefficient-root-limit"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:oeis-a195417-absolute-coefficient-root-limit:4:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "6bdbb68454659fcccffc7607b5fc292b2ff2fcdf",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/6bdbb68454659fcccffc7607b5fc292b2ff2fcdf/D5/S3/Analytic/Polynomial/A195417RootLimit.lean"
+      },
+      "lineage": "collected:oeis-a195417-absolute-coefficient-root-limit:s6",
+      "macros": {},
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "oeis-a195417-absolute-coefficient-root-limit",
+      "scope": "in_scope",
+      "statement": "If the successive ratios of $a_n$, or of any $B_n(m)$ above, converge\nto a positive number, that number equals the corresponding root limit.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "An elementary consequence of Baishanski and Neuwirth answering Hanna's coefficient root-limit question",
+      "toolchain": null,
+      "version": 4,
+      "work": "oeis-a195417-absolute-coefficient-root-limit"
+    }
+  ]
+}

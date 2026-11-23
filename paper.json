@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 88273,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "d0a022ba1471828796e41976b4ac783a21b426abacd7664afdebc4b00ed1d4f4",
+      "sha256": "d0a022ba1471828796e41976b4ac783a21b426abacd7664afdebc4b00ed1d4f4"
+    },
+    "source": {
+      "bytes": 21599,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "af4114f2fad1aa840b12e5d6037c0e94c0f40a2b02b9564a9c9d638eeb296655",
+      "sha256": "af4114f2fad1aa840b12e5d6037c0e94c0f40a2b02b9564a9c9d638eeb296655"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "As an elementary consequence of Baishanski's coefficient-norm limit (1999, §28.1, p. 523) and Neuwirth's trinomial maximum (2007, Remark 6.4), we answer Paul D. Hanna's question in OEIS A195417, first comment (history revision 2, September 17, 2011), for the cubic polynomial 1+x-x^3. If a_n is the sum of the absolute values of the coefficients of (1+x-x^3)^n, then its nth-root limit is sqrt((97+26 sqrt(13))/27). A unit-circle coefficient estimate gives explicit two-sided bounds for every n, and a polynomial identity gives the maximum exactly. The same estimate gives a self-contained proof of the A084611 root limit sqrt(5), announced by Kotěšovec in 2013, and gives the unposed root limits 9/sqrt(8) and sqrt(52/3) for A084613 and A084615.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 4,
+    "doi": null,
+    "lean_source": {
+      "revision": "6bdbb68454659fcccffc7607b5fc292b2ff2fcdf",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/6bdbb68454659fcccffc7607b5fc292b2ff2fcdf/D5/S3/Analytic/Polynomial/A195417RootLimit.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 88273,
+      "sha256": "d0a022ba1471828796e41976b4ac783a21b426abacd7664afdebc4b00ed1d4f4",
+      "url": "/api/v1/collected-papers/oeis-a195417-absolute-coefficient-root-limit/files/pdf?version=4"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-23T07:02:41.061901460Z",
+    "record": "oeis-a195417-absolute-coefficient-root-limit",
+    "repository_name": "oeis-a195417-absolute-coefficient-root-limit",
+    "source": {
+      "bytes": 21599,
+      "sha256": "af4114f2fad1aa840b12e5d6037c0e94c0f40a2b02b9564a9c9d638eeb296655",
+      "url": "/api/v1/collected-papers/oeis-a195417-absolute-coefficient-root-limit/files/source?version=4"
+    },
+    "title": "An elementary consequence of Baishanski and Neuwirth answering Hanna's coefficient root-limit question",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-23T07:02:41.061901460Z",
+        "revision": "4",
+        "version": 4
+      }
+    ],
+    "work": "oeis-a195417-absolute-coefficient-root-limit"
+  }
+}

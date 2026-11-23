@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "algebra": "The quadratic maximum-gap identity is a polynomial identity in m and u.",
+  "quadratic_parameters": [
+    1,
+    2,
+    3
+  ],
+  "quadratic_squared_bounds_and_row_identities": "0 <= n <= 1000",
+  "independent_quadratic_coefficients": "0 <= n <= 29; every coefficient",
+  "initial_absolute_sums": "First ten values of A084611, A084613 and A084615",
+  "nonnegative_rows": "0 <= n <= 100; (b,c)=(1,2),(1,3),(1,4),(2,2),(2,3)",
+  "independent_nonnegative_coefficients": "0 <= n <= 14; every coefficient",
+  "A084610_diagonal_sum": "0 <= n <= 100",
+  "arithmetic": "Integer and rational arithmetic",
+  "scope": "Finite checks; the parameter-family limits and all-index identities have written proofs.",
+  "oeis_tables": [
+    {
+      "sequence": "A084611",
+      "indices": [
+        0,
+        500
+      ],
+      "sha256": "c609648dc62552dce670120669a25e5cdf27e427bbf3fc3aad5a75b2a3752edc",
+      "source_url": "https://oeis.org/A084611/b084611.txt"
+    },
+    {
+      "sequence": "A084613",
+      "indices": [
+        0,
+        1000
+      ],
+      "sha256": "4fb830178a837d66be163ccccfd909a45d308d8b58c8df7d6740918319aad39d",
+      "source_url": "https://oeis.org/A084613/b084613.txt"
+    },
+    {
+      "sequence": "A084615",
+      "indices": [
+        0,
+        1000
+      ],
+      "sha256": "51f74bb55c73489e6e12f8cd356309b3bb6e5c5406eae15d06ba21fe1d067b77",
+      "source_url": "https://oeis.org/A084615/b084615.txt"
+    }
+  ]
+}

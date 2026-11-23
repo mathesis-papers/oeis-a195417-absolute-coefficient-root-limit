@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "algebra": "The quadratic maximum-gap identity is a polynomial identity in m and u.",
+  "quadratic_parameters": [
+    1,
+    2,
+    3
+  ],
+  "quadratic_squared_bounds_and_row_identities": "0 <= n <= 1000",
+  "independent_quadratic_coefficients": "0 <= n <= 29; every coefficient",
+  "initial_absolute_sums": "First ten values of A084611, A084613 and A084615",
+  "nonnegative_rows": "0 <= n <= 100; (b,c)=(1,2),(1,3),(1,4),(2,2),(2,3)",
+  "independent_nonnegative_coefficients": "0 <= n <= 14; every coefficient",
+  "A084610_diagonal_sum": "0 <= n <= 100",
+  "arithmetic": "Integer and rational arithmetic",
+  "scope": "Finite checks; the parameter-family limits and all-index identities have written proofs."
+}

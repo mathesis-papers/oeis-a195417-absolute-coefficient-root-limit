@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "name": "note.tex",
+      "bytes": 17593,
+      "sha256": "ce85e0574614869b085c9f5fb54abbef07772ad4fef40f8f9d7826258903252c"
+    },
+    {
+      "name": "README.md",
+      "bytes": 6535,
+      "sha256": "fe8671b083244eabec3b6bc0e926429142f8828404809e4117ca15131033f054"
+    },
+    {
+      "name": "metadata.json",
+      "bytes": 2391,
+      "sha256": "00cbd4edfa7a834ebcac18f1270bd82ec74eee50a53643aab0a11e3b5a6feac3"
+    },
+    {
+      "name": "coverage.json",
+      "bytes": 7367,
+      "sha256": "90fd6e00cb17b547c19702e8faff6642185d134f2426e3bc3a5b6d917e39899d"
+    },
+    {
+      "name": "verify.py",
+      "bytes": 6600,
+      "sha256": "c32e8236e65792af4fe66d4b8cb14cc6bb71d2c1d4439605b2d5f8f52efb56cc"
+    },
+    {
+      "name": "verify-siblings.py",
+      "bytes": 6576,
+      "sha256": "9f27e71ca73ac05446c3397d6db658aa75a8b69b4be387b28326b90be86dd51b"
+    },
+    {
+      "name": "verification.json",
+      "bytes": 739,
+      "sha256": "cf9637d4f62eedb9b47c5bee86cde76b26bbb049803028c97121676912ccf887"
+    },
+    {
+      "name": "verification-bfile.json",
+      "bytes": 937,
+      "sha256": "476eaeeb9d68a4dba7dc70d2bf83883a7f0fb7b822672279a511400726fe25b8"
+    },
+    {
+      "name": "verification-siblings.json",
+      "bytes": 735,
+      "sha256": "4c7bbccb61a544ae571f6bd699897bc45323997998efb74cc1083dfba3167a67"
+    },
+    {
+      "name": "verification-sibling-tables.json",
+      "bytes": 1468,
+      "sha256": "e988ad18d13033970bb5b1e745e788c957589708b169ac7f8a9276cbe47c04a5"
+    }
+  ]
+}

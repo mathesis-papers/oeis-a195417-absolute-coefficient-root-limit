@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "algebra": "Both unit-circle norm-square polynomials and the cubic maximum-gap identity hold exactly.",
+  "coefficient_identity_indices": "0 <= n <= 29; every coefficient",
+  "A195417_initial_terms_matched": 30,
+  "cubic_and_quadratic_bound_indices": "0 <= n <= 1000",
+  "arithmetic": "Integer arithmetic and exact rational arithmetic in Q(sqrt(13)).",
+  "radius_decimal_60_significant_digits": "2.65793245435776376991382012783092562982750034243807611165382",
+  "A195417_a1000_sha256_decimal": "1131afd620e79ccef6d3bc7de04d4d3a2595569ac3e5e2389d544448304c3e9d",
+  "scope": "Finite checks of coefficients, squared norm bounds and two-sided coefficient bounds; the all-index limits follow from the written proofs.",
+  "A195417_bfile": {
+    "indices": "0 <= n <= 1000",
+    "sha256": "301cb68472ce8aff702c1ddf45e933f54859e54c6419f0393f92cf49e55eb7c4",
+    "source_url": "https://oeis.org/A195417/b195417.txt"
+  }
+}

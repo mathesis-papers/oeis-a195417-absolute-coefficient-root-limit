@@ -1,0 +1,408 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\title{An elementary consequence of Baishanski and Neuwirth\\
+answering Hanna's coefficient root-limit question}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\
+\small ChronoAI Pte Ltd, Singapore}
+\date{November 14, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+As an elementary consequence of Baishanski's coefficient-norm limit
+(1999, \S28.1, p.~523) and Neuwirth's trinomial maximum
+(2007, Remark~6.4), we answer Paul D. Hanna's question in OEIS A195417,
+first comment (history revision~2, September 17, 2011),
+for the cubic polynomial $1+x-x^3$.
+If $a_n$ is the sum of the absolute values of the coefficients of
+$(1+x-x^3)^n$, then
+\[
+ \lim_{n\to\infty}a_n^{1/n}
+ =\sqrt{\frac{97+26\sqrt{13}}{27}}
+ =2.6579324543577637\ldots.
+\]
+A unit-circle coefficient estimate gives explicit two-sided bounds for
+every $n$, and a polynomial identity gives the maximum exactly.
+The same estimate gives a self-contained proof of the A084611
+root limit $\sqrt5$, announced by Kot\v{e}\v{s}ovec in 2013,
+and gives the unposed root limits
+$9/\sqrt8$ and $\sqrt{52/3}$ for A084613 and A084615.
+\end{abstract}
+
+\section{The question and its answer}
+For a polynomial $Q$, write $[x^k]Q$ for its coefficient of $x^k$.
+Define
+\[
+ P(x)=1+x-x^3,\qquad
+ a_n=\sum_{k=0}^{3n}\bigl|[x^k]P(x)^n\bigr|
+ \quad(n=0,1,2,\ldots).
+\]
+In the first comment of A195417, Hanna asks, ``What is the limit
+a(n)\^{}(1/n)?''~\cite{hanna195417}. The answer is
+$R=\sqrt{(97+26\sqrt{13})/27}$. The question and the coefficient definition
+already appear in the September 17, 2011 entry history, revision~2.
+The cancellation of signed coefficients prevents evaluation at $x=1$
+from determining their absolute sum. The relevant maximum is instead
+on the complex unit circle.
+
+\begin{theorem}\label{thm:main}
+Put $R=\sqrt{(97+26\sqrt{13})/27}$. For every integer $n\geq0$,
+\begin{equation}\label{eq:bounds}
+ R^n\leq a_n\leq\sqrt{3n+1}\,R^n.
+\end{equation}
+Consequently, $\lim_{n\to\infty}a_n^{1/n}=R$.
+\end{theorem}
+
+The cross-referenced entry A084611 concerns $1+x-x^2$ and conjectures
+the root limit $\sqrt5$~\cite{hanna84611}. Kot\v{e}\v{s}ovec's note dated
+July 26, 2013 announces that limit and a Legendre-polynomial
+treatment~\cite{kotesovec}.
+Corollary~\ref{cor:quadratic} supplies an alternative proof within the
+same coefficient estimate.
+
+\paragraph{Earlier results and the present argument.}
+The coefficient-norm root limit is classical: Girard discusses it in
+1971~\cite[\S1, pp.~357--358]{girard}, and Baishanski explicitly states
+the same limit for absolutely convergent power series
+in 1999~\cite[\S28.1, p.~523]{baishanski}.
+Neuwirth's 2007 formulas give both the cubic and quadratic circle
+maxima used here~\cite[Remarks~6.3--6.4, pp.~13--14]{neuwirth}.
+Thus those earlier results already imply the displayed answer by
+specialization. The contribution here is a self-contained elementary
+derivation with explicit bounds for every $n$ and short algebraic identities.
+Calegari explicitly printed the same squared cubic maximum in
+2014 for the equivalent Laurent polynomial $z^2+z-z^{-1}$~\cite{calegari}.
+The later convolution-power theorems of Diaconis--Saloff-Coste
+(May 2012) and Randles--Saloff-Coste (December 2012) also imply these
+root limits~\cite{diaconis,randles}; a stronger bound from the former
+is described below.
+
+\section{A coefficient estimate}
+The following finite-degree estimate is a direct Parseval--Cauchy--Schwarz
+proof of the polynomial case of Baishanski's stated limit~\cite{baishanski}.
+\begin{lemma}\label{lem:general}
+Let $Q\in\mathbb C[x]$ be nonzero of degree $d$, and define
+\[
+ M=\max_{|z|=1}|Q(z)|,\qquad
+ L_n=\sum_{k=0}^{dn}|[x^k]Q(x)^n|.
+\]
+Then $M>0$, and for every integer $n\geq0$,
+\begin{equation}\label{eq:general}
+ M^n\leq L_n\leq\sqrt{dn+1}\,M^n.
+\end{equation}
+In particular $\lim_{n\to\infty}L_n^{1/n}=M$.
+\end{lemma}
+\begin{proof}
+Continuity on the unit circle gives a maximizing point $z_0$.
+Since a nonzero polynomial has only finitely many zeros, $M>0$.
+Write $Q(x)^n=\sum_{k=0}^{dn}c_kx^k$.
+The triangle inequality at $z_0$ gives
+$M^n=|\sum_kc_kz_0^k|\leq\sum_k|c_k|=L_n$.
+For the upper bound, expand the finite product under the integral.
+The identity
+\[
+ \frac1{2\pi}\int_0^{2\pi}e^{\mathrm i(k-\ell)t}\,dt
+ =\begin{cases}1&k=\ell,\\0&k\ne\ell\end{cases}
+\]
+gives
+\[
+ \sum_{k=0}^{dn}|c_k|^2
+ =\frac1{2\pi}\int_0^{2\pi}|Q(e^{\mathrm it})|^{2n}\,dt
+ \leq M^{2n}.
+\]
+Cauchy--Schwarz now yields
+$L_n\leq\sqrt{dn+1}(\sum_k|c_k|^2)^{1/2}$, proving
+\eqref{eq:general}, also for $n=0$.
+For $n\geq1$, take $n$th roots and use
+$(dn+1)^{1/(2n)}\to1$. This proves the limit.
+\end{proof}
+
+\section{The cubic maximum}
+For comparison with Neuwirth's Remark~6.4, put
+$T(x)=e^{-2\mathrm ix}+e^{\mathrm i\pi/3}+e^{\mathrm ix}$.
+Then
+\[
+ P(e^{\mathrm it})=e^{\mathrm i(t-\pi/3)}T(\pi/3-t).
+\]
+His formula with $r_1=r_2=r_3=1$ gives
+$\max|T|^2=11/3+2((13/9)^{3/2}-1/27)=(97+26\sqrt{13})/27$.
+The factorization below supplies a direct algebraic proof of this
+specialization. Calegari's equivalent expression follows from
+$z^2+z-z^{-1}=z^2P(z^{-1})$ on the unit circle~\cite{calegari}.
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+For $|z|=1$ put $u=\operatorname{Re}z\in[-1,1]$.
+Expanding $P(z)\overline{P(z)}$ and using
+$\operatorname{Re}(z^2)=2u^2-1$ and
+$\operatorname{Re}(z^3)=4u^3-3u$ gives
+\begin{equation}\label{eq:cubic}
+ |1+z-z^3|^2=5+8u-4u^2-8u^3.
+\end{equation}
+Set $s=\sqrt{13}$. The exact identity
+\begin{equation}\label{eq:gap}
+ \frac{97+26s}{27}-(5+8u-4u^2-8u^3)
+ =\frac{(6u+1-s)^2(6u+1+2s)}{27}
+\end{equation}
+holds because $s^2=13$.
+Its right side is nonnegative on $[-1,1]$: its last factor
+is at least $2s-5>0$. Equality holds at
+$u_0=(s-1)/6\in[-1,1]$.
+The point $z_0=u_0+\mathrm i\sqrt{1-u_0^2}$ lies on the unit circle
+and attains equality. Thus $\max_{|z|=1}|P(z)|=R$.
+Apply Lemma~\ref{lem:general} with $d=3$ to obtain
+\eqref{eq:bounds} and the asserted limit.
+\end{proof}
+
+The estimate also gives a quantitative convergence bound:
+for $n\geq1$,
+\[
+ 0\leq\log(a_n^{1/n})-\log R\leq\frac{\log(3n+1)}{2n}.
+\]
+This follows by taking logarithms in \eqref{eq:bounds}.
+
+\section{The cross-referenced quadratic family}
+\begin{corollary}\label{cor:quadratic}
+For a real $m\geq1$, put
+\[
+ B_n(m)=\sum_{k=0}^{2n}|[x^k](1+x-mx^2)^n|,\qquad
+ M_m=(m+1)\sqrt{1+\frac1{4m}}.
+\]
+Then, for every integer $n\geq0$,
+\[
+ M_m^n\leq B_n(m)\leq\sqrt{2n+1}\,M_m^n,
+ \qquad\lim_{n\to\infty}B_n(m)^{1/n}=M_m.
+\]
+In particular the limits for A084611, A084613 and A084615 are, respectively,
+$\sqrt5$, $9/\sqrt8$ and $\sqrt{52/3}$.
+\end{corollary}
+\begin{proof}
+Writing $u=\operatorname{Re}z$ for $|z|=1$ gives
+\[
+ |1+z-mz^2|^2=m^2+2m+2+2(1-m)u-4mu^2
+ =M_m^2-\frac{(4mu+m-1)^2}{4m}.
+\]
+Equality holds at $u=(1-m)/(4m)\in[-1/4,0]$.
+Lemma~\ref{lem:general} with $d=2$ now gives the bounds and limit.
+\end{proof}
+
+The A084613 and A084615 entries define their sequences but pose no
+root-limit conjecture~\cite{hanna-family}; the corresponding limits above
+are consequences of those definitions, not answers to asserted conjectures.
+The maximum $M_m$ also follows from Neuwirth's Remark~6.3 with
+$(r_1,r_2,r_3)=(1,1,m)$: for $x=t-\pi/2$,
+$e^{-\mathrm ix}+\mathrm i+m e^{\mathrm ix}
+=\mathrm i e^{-\mathrm it}(1+e^{\mathrm it}-m e^{2\mathrm it})$.
+The required inequality $|1-1/m|<4$ holds for $m\geq1$.
+
+\paragraph{A stronger non-explicit bound from earlier stability theory.}
+For each fixed polynomial $Q=P$ or $Q(x)=1+x-mx^2$, $m\geq1$,
+Diaconis--Saloff-Coste's Theorem~2.1 gives a constant $C_Q$ such that
+$\sum_k|[x^k]Q^n|\leq C_Q(\max_{|z|=1}|Q(z)|)^n$~\cite{diaconis}.
+Here is the hypothesis check. The squared moduli have exactly two
+circle maxima. At either cubic maximum their second derivative with
+respect to $t$ is $-8\sqrt{13}(1-u_0^2)<0$; for the quadratic it is
+$-8m(1-u_m^2)<0$, where $u_m=(1-m)/(4m)$.
+Normalize the finite coefficient sequence by its circle maximum.
+Near either maximizing angle $t_0$, a local analytic logarithm of its
+Fourier transform has the expansion
+$\mathrm i\alpha(t-t_0)-\beta(t-t_0)^2+O((t-t_0)^3)$
+after division by its value at $t_0$, with $\alpha\in\mathbb R$
+and $\operatorname{Re}\beta>0$. This is condition~2 of that theorem
+with $\nu=2$, so the normalized convolution powers have bounded
+coefficient norm. The square-root bounds above instead give explicit
+constants for every $n$. In particular, Example~2.4 and the second
+remark after Proposition~2.5 of that paper already yield the quadratic
+root limit for $(a_0,a_+,a_-)=(1,-1,1)$, before the 2013 note.
+
+\begin{corollary}[Row identities]\label{cor:rows}
+For $T_{b,c}(n,k)=[x^k](1+bx+cx^2)^n$,
+\begin{align*}
+ T_{b,c}(n,k)&=\sum_{\substack{j\geq0\\0\leq k-2j\leq n-j}}
+   \binom nj\binom{n-j}{k-2j}b^{k-2j}c^j,\\
+ \sum_k T_{b,c}(n,k)&=(1+b+c)^n,\qquad
+ \sum_k(-1)^k T_{b,c}(n,k)=(1-b+c)^n,\\
+ T_{b,c}(n,2n)&=c^n,\qquad
+ T_{b,c}(n,2n-1)=nbc^{n-1}\quad(n\geq1).
+\end{align*}
+For $b=1$, $c=-m$, the ordinary and alternating row sums are
+$(2-m)^n$ and $(-m)^n$. For $b,c\geq0$ the absolute row sum is exactly
+$(1+b+c)^n$. Powers with exponent zero have value one, including $0^0$.
+\end{corollary}
+\begin{proof}
+Choose $j$ factors contributing $cx^2$ and $k-2j$ factors contributing $bx$.
+Evaluation at $x=1,-1$ gives the row sums. The last two coefficients
+come from taking $cx^2$ in all factors, or $bx$ once and $cx^2$ otherwise.
+Nonnegative coefficients turn the ordinary sum into the absolute sum.
+\end{proof}
+
+Thus the nonnegative triangles A084600, A084602, A084604, A084606 and
+A084608 have row sums $4^n,5^n,6^n,5^n,6^n$, respectively.
+The signed triangles A084610, A084612 and A084614 give the three
+absolute-sum sequences in Corollary~\ref{cor:quadratic}. These row
+identities also give elementary proofs of their displayed sum and edge
+formulas~\cite{hanna-triangles}.
+
+\begin{corollary}[A diagonal sum in A084610]\label{cor:diagonal}
+For $T(n,k)=[x^k](1+x-x^2)^n$,
+\[
+ \sum_{k=0}^nT(n-k,k)=\left\lfloor\frac{n+2}{2}\right\rfloor.
+\]
+\end{corollary}
+\begin{proof}
+The generating function of the left side is
+$\sum_{r\geq0}t^r(1+t-t^2)^r
+=1/((1-t)^2(1+t))=1/((1-t)(1-t^2))$.
+The coefficient of $t^n$ counts the choices $0\leq j\leq\lfloor n/2\rfloor$.
+\end{proof}
+
+\begin{corollary}[A necessary ratio limit]\label{cor:ratio}
+If the successive ratios of $a_n$, or of any $B_n(m)$ above, converge
+to a positive number, that number equals the corresponding root limit.
+\end{corollary}
+\begin{proof}
+For a positive sequence $u_n$, write
+$\log u_n=\log u_0+\sum_{j=0}^{n-1}\log(u_{j+1}/u_j)$.
+If the ratios tend to $\ell>0$, Ces\`aro averaging gives
+$\log u_n/n\to\log\ell$.
+\end{proof}
+The root bounds establish this necessary value; the two source statements
+about nonexistence of successive-ratio limits require a separate argument.
+
+\section{Source coverage}
+\begin{center}
+\small
+\begin{tabular}{@{}p{.31\linewidth}p{.61\linewidth}@{}}
+\toprule
+Source item & Mathematical coverage\\
+\midrule
+A195417, first comment & Answered: yes, the limit is $R$
+(Theorem~\ref{thm:main}); consequence of Baishanski (1999) and
+Neuwirth (2007), with an elementary proof here.\\[3pt]
+A195417, second comment & The assertion about successive ratios and
+attractors is not covered by the root-limit theorem.\\[3pt]
+A084611, root-limit conjecture & Proved again in Corollary~\ref{cor:quadratic};
+earlier consequence of Baishanski and Neuwirth; implied also by
+Diaconis--Saloff-Coste (2012); announced by Kot\v{e}\v{s}ovec (2013).\\[3pt]
+A084611, successive ratios & Not covered by these bounds.\\
+A084613 and A084615, definitions & Not posed; the root limits are proved
+in Corollary~\ref{cor:quadratic}, as specializations of earlier
+norm-limit and maximum formulas.\\[3pt]
+A084610, A084612, A084614, sum and edge formulas & Proved in
+Corollary~\ref{cor:rows}; the A084610 diagonal sum is proved in
+Corollary~\ref{cor:diagonal}.\\[3pt]
+A084600, A084602, A084604, A084606, A084608, row sums & Proved in
+Corollary~\ref{cor:rows}. Other identities and interpretations are not covered.\\[3pt]
+A002426, A084601, A084603, A084605, A084609, A006139
+(A084607 duplicate) & Central-coefficient asymptotics, congruences,
+transforms and other source statements: not covered.\\
+\bottomrule
+\end{tabular}
+\end{center}
+The conditional ratio restriction in Corollary~\ref{cor:ratio} is not
+asserted in either source; it neither proves nor refutes their
+nonexistence statements.
+
+\section{Verification scope}
+The proofs above establish the coefficient estimate, the sharper square-root
+prefactors, and both root limits. The Lean declaration
+\texttt{D5.S3.Analytic.Polynomial.A195417RootLimit.result}
+in \href{https://github.com/the-omega-institute/trureturing/blob/6bdbb68454659fcccffc7607b5fc292b2ff2fcdf/D5/S3/Analytic/Polynomial/A195417RootLimit.lean}{\texttt{A195417RootLimit.lean}}~\cite{lean}
+states the cubic root limit for the
+same integer coefficient sum, including the index $n=0$ in its defining
+sequence. Its supporting upper estimate has prefactor $3n+1$;
+the square-root prefactor, quadratic family and row identities have
+written proofs above. Its definitions \texttt{p} and \texttt{a}
+are the integer polynomial $1+X-X^3$ and
+$\sum_{i=0}^{3n}|[X^i]p^n|$; the limit theorem uses positive indices
+eventually, so its formal value at index zero has no effect on the limit.
+The accompanying Python program checks exact polynomial identities,
+initial coefficients, and finite instances of the inequalities; those
+finite checks are distinct from the proofs for all $n$.
+For the cubic and each of the three integer quadratic specializations,
+the checked inequalities cover $0\leq n\leq1000$, and the independent
+multinomial coefficient comparisons cover $0\leq n\leq29$.
+
+\begin{thebibliography}{99}
+\bibitem{girard}
+D.~M. Girard, The asymptotic behavior of norms of powers of absolutely
+convergent Fourier series, \emph{Pacific J. Math.} \textbf{37} (1971),
+357--381, \S1.
+\href{https://doi.org/10.2140/pjm.1971.37.357}{doi:10.2140/pjm.1971.37.357}.
+
+\bibitem{baishanski}
+B.~Baishanski, Norms of powers and a central limit theorem for
+complex-valued probabilities, in \emph{Analysis of Divergence},
+Birkh\"auser Boston, 1999, pp.~523--543, Chapter~28, \S28.1.
+\href{https://doi.org/10.1007/978-1-4612-2236-1_29}{doi:10.1007/978-1-4612-2236-1\_29}.
+
+\bibitem{neuwirth}
+S.~Neuwirth, \emph{The maximum modulus of a trigonometric trinomial},
+March 8, 2007, Remarks~6.3--6.4, pp.~13--14.
+\href{https://arxiv.org/abs/math/0703236v1}{arXiv:math/0703236v1}.
+Published in \emph{J. Anal. Math.} \textbf{104} (2008), 371--396,
+\href{https://doi.org/10.1007/s11854-008-0028-2}{doi:10.1007/s11854-008-0028-2}.
+
+\bibitem{diaconis}
+P.~Diaconis and L.~Saloff-Coste, \emph{Convolution powers of complex
+functions on $\mathbb Z$}, May 29, 2012, Theorem~2.1, Example~2.4,
+and Proposition~2.5 with its following remarks.
+\href{https://arxiv.org/abs/1205.6490v1}{arXiv:1205.6490v1}.
+
+\bibitem{randles}
+E.~Randles and L.~Saloff-Coste, \emph{On the convolution powers of
+complex functions on $\mathbb Z$}, December 19, 2012, Theorem~1, p.~4.
+\href{https://arxiv.org/abs/1212.4700v1}{arXiv:1212.4700v1}.
+
+\bibitem{calegari}
+F.~Calegari, \emph{The abelian house is not closed}, August 3, 2014;
+collected in \emph{Persiflage: Math Blog Posts}, \S52.12, pp.~104--105.
+\href{https://math.uchicago.edu/~fcale/papers/blog.pdf}{Author's collected posts}.
+
+\bibitem{hanna195417}
+P.~D. Hanna, A195417, \emph{The On-Line Encyclopedia of Integer Sequences},
+September 17, 2011; comments 1--2, examples, and
+\href{https://oeis.org/history?seq=A195417}{history, revision 2}.
+\url{https://oeis.org/A195417}.
+
+\bibitem{hanna84611}
+P.~D. Hanna, A084611, \emph{The On-Line Encyclopedia of Integer Sequences},
+June 1, 2003; root-limit comment added July 12, 2013
+(history revision~7); Kot\v{e}\v{s}ovec link added July 28, 2013
+(revision~9).
+\url{https://oeis.org/A084611}.
+
+\bibitem{kotesovec}
+V.~Kot\v{e}\v{s}ovec, \emph{Asymptotic of sequence A084611},
+July 26, 2013, pp.~1--3.
+\url{http://www.kotesovec.cz/math_articles/kotesovec_asymptotic_of_sequence_A084611.pdf}.
+
+\bibitem{hanna-family}
+P.~D. Hanna, \emph{OEIS} A084613 and A084615, definitions,
+June 1, 2003; versions 17 and 13, March 2023.
+\url{https://oeis.org/A084613}; \url{https://oeis.org/A084615}.
+
+\bibitem{hanna-triangles}
+P.~D. Hanna, \emph{OEIS} A084600, A084602, A084604, A084606,
+A084608, A084610, A084612 and A084614, definitions and formulas;
+row formulas contributed by G.~C. Greubel, March 2023, and
+G.~W. Adamson, May 2008.
+\url{https://oeis.org/A084610}; \url{https://oeis.org/A084612};
+\url{https://oeis.org/A084614}; \url{https://oeis.org/A084608}.
+
+\bibitem{lean}
+\emph{A195417RootLimit.lean},\newline declaration
+\texttt{D5.S3.Analytic.Polynomial.A195417RootLimit.result},
+revision \texttt{6bdbb68454659fcccffc7607b5fc292b2ff2fcdf}.
+\href{https://github.com/the-omega-institute/trureturing/blob/6bdbb68454659fcccffc7607b5fc292b2ff2fcdf/D5/S3/Analytic/Polynomial/A195417RootLimit.lean}{Pinned Lean source}.
+\end{thebibliography}
+\bigskip
+\noindent\small\textcopyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International
+(\href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}).
+\end{document}

@@ -1,0 +1,176 @@
+{
+  "coverage": [
+    {
+      "source": "https://oeis.org/A195417",
+      "locator": "first comment; September 17, 2011 history, revision 2",
+      "source_quote": "What is the limit a(n)^(1/n)?",
+      "status": "answered: yes; prior result cited; elementary consequence proved",
+      "statement": "The limit exists and equals sqrt((97+26 sqrt(13))/27).",
+      "prior_sources": [
+        "https://doi.org/10.1007/978-1-4612-2236-1_29",
+        "https://arxiv.org/abs/math/0703236v1"
+      ]
+    },
+    {
+      "source": "https://oeis.org/A084611",
+      "locator": "comment, root-limit clause",
+      "status": "proved again; prior result cited",
+      "prior_source": "http://www.kotesovec.cz/math_articles/kotesovec_asymptotic_of_sequence_A084611.pdf",
+      "prior_author": "Václav Kotěšovec",
+      "prior_year": 2013,
+      "prior_sources_in_date_order": [
+        {
+          "author": "Bogdan Baishanski",
+          "year": 1999,
+          "scope": "General norm-limit statement; combine with the 2007 maximum."
+        },
+        {
+          "author": "Stefan Neuwirth",
+          "year": 2007,
+          "scope": "Quadratic maximum in Remark 6.3."
+        },
+        {
+          "authors": "Persi Diaconis and Laurent Saloff-Coste",
+          "year": 2012,
+          "scope": "Example 2.4 and stability remark after Proposition 2.5 imply the quadratic root limit."
+        },
+        {
+          "author": "Václav Kotěšovec",
+          "year": 2013,
+          "scope": "Explicitly announced A084611 root-limit value and Legendre-polynomial treatment; present proof is independent of the central-coefficient reduction."
+        }
+      ]
+    },
+    {
+      "source": "https://oeis.org/A195417",
+      "locator": "second comment",
+      "status": "not covered",
+      "statement": "Successive ratios and attractors."
+    },
+    {
+      "source": "https://oeis.org/A084611",
+      "locator": "comment, successive-ratio clause",
+      "status": "not covered"
+    },
+    {
+      "source": "https://oeis.org/A084613",
+      "locator": "definition; revision 17, March 26, 2023",
+      "status": "not posed; proved",
+      "statement": "The absolute coefficient nth-root limit is 9/sqrt(8). The source poses no root-limit claim."
+    },
+    {
+      "source": "https://oeis.org/A084615",
+      "locator": "definition; revision 13, March 25, 2023",
+      "status": "not posed; proved",
+      "statement": "The absolute coefficient nth-root limit is sqrt(52/3). The source poses no root-limit claim."
+    },
+    {
+      "sources": [
+        "https://oeis.org/A084610",
+        "https://oeis.org/A084612",
+        "https://oeis.org/A084614"
+      ],
+      "locator": "displayed row-sum and edge-coefficient formulas",
+      "status": "proved",
+      "statement": "Multinomial formula, ordinary and alternating row sums, last and penultimate coefficients; the A084610 ordinary diagonal sum is also proved."
+    },
+    {
+      "sources": [
+        "https://oeis.org/A084600",
+        "https://oeis.org/A084602",
+        "https://oeis.org/A084604",
+        "https://oeis.org/A084606",
+        "https://oeis.org/A084608"
+      ],
+      "locator": "polynomial row definitions; A084600 comment and A084608 row-sum formula",
+      "status": "proved",
+      "statement": "Absolute row sums are 4^n, 5^n, 6^n, 5^n and 6^n, respectively."
+    },
+    {
+      "sources": [
+        "https://oeis.org/A002426",
+        "https://oeis.org/A084601",
+        "https://oeis.org/A084603",
+        "https://oeis.org/A084605",
+        "https://oeis.org/A084609",
+        "https://oeis.org/A006139"
+      ],
+      "locator": "central-coefficient definitions and subsequent statements; A084607 duplicates A006139",
+      "status": "not covered",
+      "statement": "Central-coefficient asymptotics, transforms, congruences and other source statements."
+    },
+    {
+      "sources": [
+        "https://oeis.org/A195417",
+        "https://oeis.org/A084611"
+      ],
+      "status": "not posed; proved",
+      "statement": "Any positive successive-ratio limit must equal the root limit. This conditional restriction does not establish existence or nonexistence of that ratio limit."
+    },
+    {
+      "sources": [
+        "https://arxiv.org/abs/1205.6490v1"
+      ],
+      "locator": "Theorem 2.1, p. 5",
+      "status": "prior result cited; hypotheses checked",
+      "statement": "For each fixed polynomial P or 1+x-m*x^2 with real m>=1, the coefficient norm is at most C_Q times its circle maximum to the nth power."
+    }
+  ],
+  "verification": {
+    "written_proofs": "General complex-polynomial coefficient estimate; cubic circle maximum, bounds and limit; logarithmic convergence bound; real-parameter quadratic family for m>=1; multinomial, row and edge identities; A084610 ordinary diagonal sum; necessary value of a positive successive-ratio limit.; hypothesis check for the cited stability-theorem consequence.",
+    "lean_declaration": "D5.S3.Analytic.Polynomial.A195417RootLimit.result",
+    "lean_statement_scope": "Cubic nth-root limit for the integer coefficient sum; supporting upper bound has prefactor 3n+1.",
+    "finite_checks": "Exact cubic and quadratic-family gap identities; independent cubic and three quadratic coefficient formulas for 0<=n<=29; cubic and quadratic squared bounds for 0<=n<=1000; row and edge identities for three signed families for 0<=n<=1000; five nonnegative families and A084610 diagonal sum for 0<=n<=100."
+  },
+  "prior_work": [
+    {
+      "author": "Dennis M. Girard",
+      "year": 1971,
+      "url": "https://doi.org/10.2140/pjm.1971.37.357",
+      "locator": "§1, pp. 357–358",
+      "scope": "Classical root-norm limit and square-root growth context."
+    },
+    {
+      "author": "Bogdan Baishanski",
+      "year": 1999,
+      "url": "https://doi.org/10.1007/978-1-4612-2236-1_29",
+      "locator": "§28.1, p. 523",
+      "scope": "Explicit norm-root limit for absolutely convergent power series."
+    },
+    {
+      "author": "Stefan Neuwirth",
+      "year": 2007,
+      "url": "https://arxiv.org/abs/math/0703236v1",
+      "locator": "Remarks 6.3–6.4, pp. 13–14",
+      "scope": "Both circle maxima and the cubic maximizing real part."
+    },
+    {
+      "authors": "Persi Diaconis and Laurent Saloff-Coste",
+      "year": 2012,
+      "url": "https://arxiv.org/abs/1205.6490v1",
+      "locator": "Theorem 2.1; Example 2.4; Proposition 2.5 and following remarks",
+      "scope": "Stability bounds and a prior quadratic specialization."
+    },
+    {
+      "authors": "Evan Randles and Laurent Saloff-Coste",
+      "year": 2012,
+      "url": "https://arxiv.org/abs/1212.4700v1",
+      "locator": "Theorem 1, p. 4",
+      "scope": "Supremum coefficient bounds implying the same norm-root limit for finite support."
+    },
+    {
+      "author": "Václav Kotěšovec",
+      "year": 2013,
+      "url": "http://www.kotesovec.cz/math_articles/kotesovec_asymptotic_of_sequence_A084611.pdf",
+      "locator": "pp. 1–3",
+      "scope": "Announced A084611 root-limit value and Legendre-polynomial treatment."
+    },
+    {
+      "author": "Frank Calegari",
+      "year": 2014,
+      "url": "https://math.uchicago.edu/~fcale/papers/blog.pdf",
+      "locator": "§52.12, pp. 104–105; post of August 3, 2014",
+      "scope": "Explicit identical squared maximum for z^2+z-z^(-1), not the coefficient-power root limit."
+    }
+  ]
+}

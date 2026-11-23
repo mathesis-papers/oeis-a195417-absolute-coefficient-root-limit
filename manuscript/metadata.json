@@ -1,0 +1,23 @@
+{
+  "id": "oeis-a195417-absolute-coefficient-root-limit",
+  "revision": 4,
+  "problem_ids": [
+    "oeis-a195417-absolute-coefficient-root-limit"
+  ],
+  "topic": "Hanna's A195417 root-limit question and the cross-referenced quadratic coefficient sums",
+  "title": "An elementary consequence of Baishanski and Neuwirth answering Hanna's coefficient root-limit question",
+  "creators": [
+    {
+      "name": "Ma, Haobo",
+      "affiliation": "ChronoAI Pte Ltd, Singapore"
+    },
+    {
+      "name": "Zhang, Wenlin",
+      "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"
+    }
+  ],
+  "abstract": "As an elementary consequence of Baishanski's coefficient-norm limit (1999, §28.1, p. 523) and Neuwirth's trinomial maximum (2007, Remark 6.4), we answer Paul D. Hanna's question in OEIS A195417, first comment (history revision 2, September 17, 2011), for the cubic polynomial 1+x-x^3. If a_n is the sum of the absolute values of the coefficients of (1+x-x^3)^n, then its nth-root limit is sqrt((97+26 sqrt(13))/27). A unit-circle coefficient estimate gives explicit two-sided bounds for every n, and a polynomial identity gives the maximum exactly. The same estimate gives a self-contained proof of the A084611 root limit sqrt(5), announced by Kotěšovec in 2013, and gives the unposed root limits 9/sqrt(8) and sqrt(52/3) for A084613 and A084615.",
+  "summary": "An elementary proof of consequences of Baishanski's earlier coefficient-norm limit and Neuwirth's earlier circle maxima: The cubic absolute coefficient sum lies between R^n and sqrt(3n+1) R^n for every n>=0, where R=sqrt((97+26 sqrt(13))/27). For real m>=1, the absolute coefficient sum of (1+x-m*x^2)^n lies between M_m^n and sqrt(2n+1) M_m^n, where M_m=(m+1)*sqrt(1+1/(4m)). This includes A084611, A084613 and A084615. Row and edge identities and the A084610 ordinary diagonal sum have written proofs. The successive-ratio nonexistence assertions are not covered; any positive ratio limit must equal the corresponding root limit. Diaconis–Saloff-Coste's stability theorem also gives a constant (not explicit here) prefactor for each fixed cubic or quadratic polynomial; the note checks its hypotheses.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/6bdbb68454659fcccffc7607b5fc292b2ff2fcdf/D5/S3/Analytic/Polynomial/A195417RootLimit.lean"
+}

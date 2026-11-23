@@ -1,0 +1,11 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "oeis-a195417-absolute-coefficient-root-limit",
+  "version": 4,
+  "repository_url": "https://github.com/mathesis-papers/oeis-a195417-absolute-coefficient-root-limit",
+  "site_url": "https://papers.trureturing.org/oeis-a195417-absolute-coefficient-root-limit/",
+  "doi": null,
+  "reading": {},
+  "slides": [],
+  "visualizations": []
+}
